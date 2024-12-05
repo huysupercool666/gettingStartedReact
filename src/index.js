@@ -10,20 +10,40 @@ import CounterSeparated from "./pages/QuickStart/counterUpdateSeparated";
 import FilterableProductTable from "./pages/ThinkInReact/filterableProductTable";
 import TicTacToe from "./pages/Tic-tac-toe/TicTacToe";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 export default function Home() {
-  return (
+    return (
+      <> 
+      <div>
+      <h1>Quick Start</h1>
+        <ul>
+          <li> Url Homework 1: <b>/Hello-World</b></li>
+          <li> Url Homework 2: <b>Profile</b></li>
+          <li> Url Homework 3: <b>/Shopping-List</b></li>
+          <li> Url Homework 4: <b>/Counter-Update-Same-Time</b></li>
+          <li> Url Homework 5: <b>/Counter-Separated</b></li>
+        </ul>
+          <h1>Think In React</h1>
+        <ul>
+          <li> Url Homework: Filterable Product Table: <b>/Product-Table</b></li>
+        </ul>
+          <h1>Tic Tac Toe</h1>
+        <ul>
+          <li> Url Homework: <b>/Tic-Tac-Toe</b></li>
+        </ul>
+      </div>
     <BrowserRouter>
       <Routes>
-        <Route path="/HelloWorld" element={<HellWorld />} />
+        <Route path="/Hello-World" element={<HellWorld />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/ShoppingList" element={<ShoppingList />}/>
-        <Route path="/CounterUpdateSameTime" element={<CounterUpdateSameTime/>}/>
-        <Route path="/CounterSeparated" element={<CounterSeparated/>} />
-        <Route path="/FilterableProductTable" element={<FilterableProductTable/>} />
-        <Route path="/Tic_tac_toe" element={<TicTacToe/>} />
-        {/* <Route path="/TodoApp" element={<ToDoApp/>} */}
+        <Route path="/Shopping-List" element={<ShoppingList />}/>
+        <Route path="/Counter-Update-Same-Time" element={<CounterUpdateSameTime/>}/> 
+        <Route path="/Counter-Separated" element={<CounterSeparated/>} />
+        <Route path="/Product-Table" element={<FilterableProductTable/>} />
+        <Route path="/Tic-Tac-Toe" element={<TicTacToe/>} />   
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 const root = createRoot(document.getElementById("root"));
